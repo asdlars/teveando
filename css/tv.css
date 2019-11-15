@@ -1,0 +1,63 @@
+html,body, .grid {
+  background: black;
+  color:white;
+  width: 100vw;
+  height: 100vh;
+}
+.container-fluid {
+    padding-right: 0;
+    padding-left: 0;
+}
+.addStream {
+  border-radius: 50px;
+  padding: 1em 0em 0em 0em;
+  margin: 0px;
+  right: 1vw;
+  position: absolute;
+  bottom: 1vh;
+  cursor: pointer;
+  overflow: hidden;
+}
+.addStreamBtn {
+    font-size: 6em;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+    line-height: 0;
+}
+.grid-item {
+  overflow: auto;
+  border: 1px solid white;
+  display:inline-grid;
+  background-image: url("../img/169.gif");
+  background-size: contain;
+  background-repeat: no-repeat;
+  padding: 0em;
+  min-height: 235px;
+  min-width: 416px;
+  max-width: 1084px;
+  max-height: 610px;
+  position: absolute !important;
+}
+.grid-item:hover {
+  padding: 1em;
+  cursor: move;
+}
+.cerrar {
+  display: none;
+}
+.cerrarBtn {
+  font-size: 3em;
+  transform: rotate(45deg);
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 50px;
+  line-height: 0.5em;
+  padding: 0em 0em 0.20em 0em;
+}
+.grid-item:hover .cerrar {
+  display: block;
+  position: absolute;
+  right: 21px;
+  top: 21px;
+}
