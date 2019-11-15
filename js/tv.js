@@ -4,7 +4,6 @@ $(function() {
   createChannel("cima");
   createChannel("mega");
   createChannel("cnn");
-  createChannel("test");
 
   function initChannel(gid,vid) {
     hayCanales = $(".grid").has("div").length;
@@ -72,6 +71,7 @@ $(function() {
 
   function createChannel(vid) {
     gid = Math.floor(Math.random()*100000);
+    embed = "";
     switch (vid) {
       case "test":
         vid = "n747ktceuwI";
@@ -83,13 +83,16 @@ $(function() {
         vid = "HChCAZCHhS4";
         break;
       case "cima":
-        vid = "-Z6JVbTVXnc";
+        vid = "UC4GOcOKkEefz5NamN4WyMFg";
+        embed = '<iframe src="https://www.youtube.com/embed/live_stream?channel=UC4GOcOKkEefz5NamN4WyMFg&autoplay=1&mute=1&vq=medium&enablejsapi=1&modestbranding=1&showinfo=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
         break;
       default:
         vid = vid;
 
     }
-    embed = '<iframe src="https://www.youtube-nocookie.com/embed/'+vid+'" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+    if(embed == "") {
+      embed = '<iframe src="https://www.youtube-nocookie.com/embed/'+vid+'" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+    }
     initChannel(gid,vid);
   }
 
